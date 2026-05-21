@@ -1,91 +1,11 @@
-🚗 Car Colour Detection & People Counter
-A machine learning project that detects cars in traffic images, identifies their colour, and counts people at traffic signals — using YOLOv8 and OpenCV.
+1 . Car colour detection Model: Description: In this task, you will develop a machine learning model to predict the colour of cars in traffic and count the number of cars at a traffic signal. The model should show a red rectangle for blue cars, and blue rectangles for other colour cars. Additionally, if there are people at the traffic signal, the model should show the number of people present. Guidelines: You should have a proper GUI with a preview of input images
 
-🎯 What This Project Does
-DetectionBox Colour🔵 Blue Car🔴 RED rectangle🚗 Other Colour Car🔵 BLUE rectangle🧍 Person🟢 GREEN rectangle
+2.Sign Language Detection: Description: In this task, you will train a machine learning model to predict sign language and recognize some known words of your choice. The model should be operational during a specific time period, such as from 6 PM to 10 PM. Guidelines: You should have a proper GUI with features for both upload image and real time video.
 
-Counts total vehicles detected
-Counts blue vehicles specifically
-Counts people present at the signal
-Displays summary on the image itself
+3.Nationality Detection Model: Description: In this task, you will develop a machine learning model to predict the nationality of a person by uploading their image and predict their emotion. If the person’s nationality is Indian, the model should additionally predict their age and dress colour along with emotions. For individuals from the United States, the model should predict only their age and emotions. For African individuals, the model should predict their emotion and dress colour. For other nationalities, the model should predict only their nationality and emotions. Guidelines: You should have a proper GUI with preview of the input images. Also have an output section to show the results.
 
+4.Long Hair Identification: Description: In this task, you will develop a feature to detect a person with long hair as female, even if they are male, and detect a short-haired female as male, even if they are female. The model should work exclusively for individuals aged between 20 and 30. If an image of a person outside this age range (below 20 or above 30) is uploaded, the model should correctly predict their gender regardless of hair length. Guidelines: This task is designed to test your logic-building and problem-solving skills. We encourage you to embrace the challenge and view it as an opportunity to grow. Please create your own machine learning model and ensure it includes a graphical user interface (GUI). While accuracy is important, we will evaluate your work based on the overall performance of your model and the successful functionality of your GUI. Good luck and enjoy the process!
 
-🛠️ Tech Stack
+5.Age and Emotion Detection through voice: Description: In this task, you will develop a machine learning model to detect a person’s age from a voice note. The model should only process male voices; if a female voice is detected, it should reject the input and display a message saying, “Upload male voice.” If the person’s age is more than 60, the model should mark them as a senior citizen and detect their emotion. For individuals below 60, the model should only detect their age. Guidelines: This task is designed to test your logic-building and problem-solving skills. We encourage you to embrace the challenge and view it as an opportunity to grow. Please create your own machine learning model and ensure it includes a graphical user interface (GUI). While accuracy is important, we will evaluate your work based on the overall performance of your model and the successful functionality of your GUI.
 
-YOLOv8 — Object detection (cars, people)
-OpenCV — Image processing & colour detection
-Python — Core language
-Google Colab — Free cloud environment to run
-Kaggle — Dataset source
-
-
-🚀 How to Run (Step by Step)
-Step 1 — Open in Google Colab
-
-Go to https://colab.research.google.com
-Click File → Upload Notebook
-Upload the file car_color_detection.ipynb
-
-Step 2 — Get Kaggle API Key
-
-Go to https://www.kaggle.com
-Click your Profile picture → Settings
-Scroll to API section → Click Create New Token
-A file called kaggle.json will download to your computer
-
-Step 3 — Run the Notebook
-Run each cell in order from top to bottom:
-
-Cell 1 — Installs required libraries
-Cell 2 — Upload your kaggle.json file when prompted
-Cell 3 — Downloads the traffic dataset automatically
-Cell 4 — Loads the YOLOv8 model
-Cell 5 — Sets up detection functions
-Cell 6 — Opens a GUI where you can upload your own image
-Cell 7 — Tests on dataset images automatically
-
-
-📂 Project Structure
-car-color-detection/
-│
-├── car_color_detection.ipynb   ← Main notebook (run this)
-└── README.md                   ← This file
-
-📊 How Colour Detection Works
-
-YOLOv8 detects each car and gives its bounding box coordinates
-We crop that car region from the image
-We convert the cropped region to HSV colour space (better for colour detection)
-We check if more than 15% of pixels fall in the blue HSV range (Hue: 100–140)
-If yes → RED rectangle. If no → BLUE rectangle
-
-
-🖥️ Sample Output
-══════════════════════════════════════
-   🚗 CAR COLOUR DETECTION SYSTEM
-══════════════════════════════════════
-📊 Results:
-   🚗 Total vehicles detected : 6
-   🔵 Blue vehicles           : 1
-   👤 People detected         : 3
-══════════════════════════════════════
-
-📦 Dataset Used
-Traffic Vehicles Object Detection from Kaggle
-kaggle datasets download -d saumyapatel/traffic-vehicles-object-detection
-You can replace this with any traffic/car dataset from Kaggle.
-
-🔧 Requirements
-All installed automatically in the notebook:
-ultralytics
-opencv-python-headless
-ipywidgets
-Pillow
-kaggle
-
-👤 Author
-Dhanushkumar Kuppusamy — Final Year BCA Student
-Interested in Data Science & Machine Learning
-
-📄 License
-MIT License — Free to use and modify
+6.Senior citizen Identification: Description: In this task, you will develop a machine learning model to predict multiple persons in a video or real-time webcam feed for a mall or local store. Your model should detect their age and gender. If a person’s age is more than 60, mark them as a senior citizen and detect their gender. After detection, store the age, gender, and time of visit in an Excel or CSV file. Guidelines: Create your own machine learning model for this task. While a graphical user interface (GUI) is not mandatory, you are welcome to include one if you wish. Although accuracy is important, we will evaluate your work based on the overall performance of your model and the successful functionality of your GUI.
